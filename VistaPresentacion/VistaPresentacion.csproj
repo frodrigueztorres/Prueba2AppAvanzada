@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminCamionCamionero.aspx" />
+    <Content Include="AdminEncomienda.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -76,6 +77,13 @@
     </Compile>
     <Compile Include="AdminCamionCamionero.aspx.designer.cs">
       <DependentUpon>AdminCamionCamionero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminEncomienda.aspx.cs">
+      <DependentUpon>AdminEncomienda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminEncomienda.aspx.designer.cs">
+      <DependentUpon>AdminEncomienda.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
