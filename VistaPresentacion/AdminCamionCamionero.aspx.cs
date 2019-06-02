@@ -13,5 +13,10 @@ namespace VistaPresentacion
         {
 
         }
+
+        protected void Button9_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdminEncomienda.aspx");
+        }
     }
 }
