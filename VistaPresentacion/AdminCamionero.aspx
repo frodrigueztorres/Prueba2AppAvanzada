@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminCamionCamionero.aspx.cs" Inherits="VistaPresentacion.AdminCamionCamionero" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminCamionero.aspx.cs" Inherits="VistaPresentacion.AdminCamionCamionero" %>
 
 <!DOCTYPE html>
 
@@ -8,13 +8,13 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 117px;
+            width: 135px;
         }
         .auto-style2 {
             width: 340px;
         }
         .auto-style3 {
-            width: 117px;
+            width: 135px;
             height: 29px;
         }
         .auto-style4 {
@@ -24,18 +24,12 @@
         .auto-style5 {
             height: 29px;
         }
-        .auto-style6 {
-            width: 170px;
-        }
-        .auto-style7 {
-            width: 282px;
-        }
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="Label1" runat="server" Text="INGRESO DE CAMION Y CAMIONES"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="INGRESO DE CAMIONEROS"></asp:Label>
             <br />
             <br />
             <asp:Label ID="Label2" runat="server" Text="Datos de Camionero"></asp:Label>
@@ -48,6 +42,8 @@
                     </td>
                     <td class="auto-style2">
                         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    &nbsp;<asp:Label ID="Label13" runat="server" Text="-"></asp:Label>
+&nbsp;<asp:TextBox ID="TextBox9" runat="server" Width="20px"></asp:TextBox>
                     </td>
                     <td>
                         <asp:Button ID="Button1" runat="server" Text="Buscar Camionero" Width="207px" />
@@ -61,7 +57,7 @@
                         <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:Button ID="Button2" runat="server" Text="Modificar Camionero" Width="207px" />
+            <asp:Button ID="Button8" runat="server" Text="Limpiar Formulario" Width="207px" />
                     </td>
                 </tr>
                 <tr>
@@ -72,8 +68,7 @@
                         <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
                     </td>
                     <td class="auto-style5">
-                        <asp:Button ID="Button3" runat="server" Text="Eliminar Camionero" Width="207px" />
-                    </td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style1">
@@ -102,55 +97,40 @@
                     </td>
                     <td>&nbsp;</td>
                 </tr>
-            </table>
-            <hr />
-            <br />
-            <asp:Label ID="Label9" runat="server" Text="Datos de Camion"></asp:Label>
-            <br />
-            <br />
-            <table style="width:100%;">
                 <tr>
-                    <td class="auto-style6">
-                        <asp:Label ID="Label10" runat="server" Text="Matricula"></asp:Label>
-                    </td>
-                    <td class="auto-style7">
-                        <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
-                    </td>
-                    <td>
-                        <asp:Button ID="Button4" runat="server" Text="Buscar Camión" Width="207px" />
-                    </td>
+                    <td class="auto-style1">
+                        &nbsp;</td>
+                    <td class="auto-style2">
+                        &nbsp;</td>
+                    <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style6">
-                        <asp:Label ID="Label11" runat="server" Text="Potencia"></asp:Label>
+                    <td class="auto-style1">
+                        <asp:Label ID="Label14" runat="server" Text="Asignar camión"></asp:Label>
                     </td>
-                    <td class="auto-style7">
-                        <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
-                    </td>
-                    <td>
-                        <asp:Button ID="Button5" runat="server" Text="Modificar Camión" Width="207px" />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style6">
-                        <asp:Label ID="Label12" runat="server" Text="Tipo de Camión"></asp:Label>
-                    </td>
-                    <td class="auto-style7">
+                    <td class="auto-style2">
                         <asp:DropDownList ID="DropDownList1" runat="server">
                         </asp:DropDownList>
                     </td>
                     <td>
-                        <asp:Button ID="Button6" runat="server" Text="Eliminar Camión" Width="207px" />
+                        <asp:Button ID="Button11" runat="server" OnClick="Button11_Click" Text="Añadir camión" Width="207px" />
                     </td>
                 </tr>
             </table>
             <br />
-            <br />
             <asp:Button ID="Button7" runat="server" Text="Guardar" />
 &nbsp;&nbsp;&nbsp;
-            <asp:Button ID="Button8" runat="server" Text="Limpiar Formulario" />
+                        <asp:Button ID="Button2" runat="server" Text="Actualizar" />
+                    &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button10" runat="server" Text="Eliminar" />
 &nbsp;&nbsp;&nbsp;
             <asp:Button ID="Button9" runat="server" Text="Volver" OnClick="Button9_Click" />
+            <br />
+            <br />
+            <asp:Label ID="Label15" runat="server" Text="Listado de camiones conducidos anteriormente"></asp:Label>
+            <br />
+            <asp:GridView ID="GridView1" runat="server">
+            </asp:GridView>
         </div>
     </form>
 </body>
