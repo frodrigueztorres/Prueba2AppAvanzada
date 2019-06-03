@@ -58,13 +58,13 @@ namespace VistaPresentacion {
         protected global::System.Web.UI.WebControls.TextBox TextBox7;
         
         /// <summary>
-        /// Control Button4.
+        /// Control btn_schCamion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button4;
+        protected global::System.Web.UI.WebControls.Button btn_schCamion;
         
         /// <summary>
         /// Control Label11.

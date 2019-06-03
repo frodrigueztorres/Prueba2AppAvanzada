@@ -30,7 +30,7 @@
                         <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:Button ID="Button4" runat="server" Text="Buscar Camión" Width="207px" />
+                        <asp:Button ID="btn_schCamion" runat="server" Text="Buscar Camión" Width="207px" />
                     </td>
                 </tr>
                 <tr>
