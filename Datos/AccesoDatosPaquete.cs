@@ -5,7 +5,8 @@ using System.Text;
 
 namespace Datos
 {
-    class AccesoDatos
+    class AccesoDatosPaquete
     {
+        //Generar CRUD para cada tabla en archivos separados
     }
 }

@@ -66,17 +66,25 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AdminCamionCamionero.aspx" />
+    <Content Include="AdminCamion.aspx" />
+    <Content Include="AdminCamionero.aspx" />
     <Content Include="AdminEncomienda.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminCamionCamionero.aspx.cs">
-      <DependentUpon>AdminCamionCamionero.aspx</DependentUpon>
+    <Compile Include="AdminCamion.aspx.cs">
+      <DependentUpon>AdminCamion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdminCamionCamionero.aspx.designer.cs">
-      <DependentUpon>AdminCamionCamionero.aspx</DependentUpon>
+    <Compile Include="AdminCamion.aspx.designer.cs">
+      <DependentUpon>AdminCamion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCamionero.aspx.cs">
+      <DependentUpon>AdminCamionero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCamionero.aspx.designer.cs">
+      <DependentUpon>AdminCamionero.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminEncomienda.aspx.cs">
       <DependentUpon>AdminEncomienda.aspx</DependentUpon>
