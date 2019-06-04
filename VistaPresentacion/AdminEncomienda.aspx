@@ -30,7 +30,7 @@
                         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:Button ID="Button1" runat="server" Text="Buscar Paquete" Width="294px" />
+                        <asp:Button ID="Button1" runat="server" Text="Buscar Paquete" Width="207px" />
                     </td>
                 </tr>
                 <tr>
@@ -41,7 +41,7 @@
                         <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:Button ID="Button5" runat="server" Text="Limpiar Formulario" Width="294px" />
+                        <asp:Button ID="Button5" runat="server" Text="Limpiar Formulario" Width="207px" />
                     </td>
                 </tr>
                 <tr>
@@ -76,7 +76,19 @@
                         </asp:DropDownList>
                     </td>
                     <td>
-                        <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" Text="Ingresar Nuevo Camionero" Width="294px" />
+                        <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" Text="Ingresar Nuevo Camionero" Width="208px" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">
+                        <asp:Label ID="Label9" runat="server" Text="Camión a conducir"></asp:Label>
+                    </td>
+                    <td class="auto-style1">
+                        <asp:DropDownList ID="DropDownList4" runat="server">
+                        </asp:DropDownList>
+                    </td>
+                    <td>
+                        <asp:Button ID="Button7" runat="server" OnClick="Button7_Click" Text="Ingresar nuevo camión" Width="207px" />
                     </td>
                 </tr>
                 <tr>

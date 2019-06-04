@@ -16,7 +16,7 @@ namespace VistaPresentacion
 
         protected void Button8_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AdminCamionero.aspx");
+            Response.Redirect("AdminEncomienda.aspx");
         }
     }
 }

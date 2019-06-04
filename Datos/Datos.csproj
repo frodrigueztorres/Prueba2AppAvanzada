@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatosCamion.cs" />
+    <Compile Include="AccesoDatosCamionCamionero.cs" />
     <Compile Include="AccesoDatosCamionero.cs" />
     <Compile Include="AccesoDatosPaquete.cs" />
     <Compile Include="MetodoDatos.cs" />
