@@ -15,7 +15,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="Label1" runat="server" Text="INGRESO DE CAMIONEROS"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="INGRESO DE CAMIONES"></asp:Label>
                         <br />
                         <br />
                         <asp:Label ID="Label9" runat="server" Text="Datos de Camion"></asp:Label>

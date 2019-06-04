@@ -104,19 +104,7 @@
                         &nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
-                <tr>
-                    <td class="auto-style1">
-                        <asp:Label ID="Label14" runat="server" Text="Asignar camión"></asp:Label>
-                    </td>
-                    <td class="auto-style2">
-                        <asp:DropDownList ID="DropDownList1" runat="server">
-                        </asp:DropDownList>
-                    </td>
-                    <td>
-                        <asp:Button ID="Button11" runat="server" OnClick="Button11_Click" Text="Añadir camión" Width="207px" />
-                    </td>
-                </tr>
-            </table>
+                </table>
             <br />
             <asp:Button ID="Button7" runat="server" Text="Guardar" />
 &nbsp;&nbsp;&nbsp;
@@ -126,11 +114,6 @@
 &nbsp;&nbsp;&nbsp;
             <asp:Button ID="Button9" runat="server" Text="Volver" OnClick="Button9_Click" />
             <br />
-            <br />
-            <asp:Label ID="Label15" runat="server" Text="Listado de camiones conducidos anteriormente"></asp:Label>
-            <br />
-            <asp:GridView ID="GridView1" runat="server">
-            </asp:GridView>
         </div>
     </form>
 </body>
