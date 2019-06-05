@@ -112,13 +112,13 @@ namespace VistaPresentacion {
         protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
         
         /// <summary>
-        /// Control Button7.
+        /// Control btn_guardarCamion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button7;
+        protected global::System.Web.UI.WebControls.Button btn_guardarCamion;
         
         /// <summary>
         /// Control Button5.
@@ -139,12 +139,12 @@ namespace VistaPresentacion {
         protected global::System.Web.UI.WebControls.Button Button6;
         
         /// <summary>
-        /// Control Button8.
+        /// Control btn_VolverCamion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button8;
+        protected global::System.Web.UI.WebControls.Button btn_VolverCamion;
     }
 }

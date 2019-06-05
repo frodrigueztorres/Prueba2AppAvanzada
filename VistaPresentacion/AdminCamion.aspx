@@ -57,13 +57,13 @@
                 </tr>
             </table>
             <br />
-                        <asp:Button ID="Button7" runat="server" Text="Guardar" />
+                        <asp:Button ID="btn_guardarCamion" runat="server" Text="Guardar" OnClick="Button7_Click" />
 &nbsp;&nbsp;&nbsp;
                         <asp:Button ID="Button5" runat="server" Text="Actualizar" />
                     &nbsp;&nbsp;&nbsp;
                         <asp:Button ID="Button6" runat="server" Text="Eliminar" />
 &nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="Button8" runat="server" OnClick="Button8_Click" Text="Volver" />
+                        <asp:Button ID="btn_VolverCamion" runat="server" OnClick="Button8_Click" Text="Volver" />
             <br />
         </div>
     </form>
