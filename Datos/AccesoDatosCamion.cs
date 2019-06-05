@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.Sql;
 using System.Linq;
 using System.Text;
 
 namespace Datos
 {
-    class AccesoDatosCamion
+    public class AccesoDatosCamion
     {
         //INSERTAR DATOS DEL CAMION
         public int InsertCamion(int id_camion, string matricula, int tipo, int potencia)

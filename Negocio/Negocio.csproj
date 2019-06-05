@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Logica.cs" />
+    <Compile Include="LogicaCamion.cs" />
+    <Compile Include="LogicaCamionero.cs" />
+    <Compile Include="LogicaPaquete.cs" />
+    <Compile Include="LogicaVerificacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
