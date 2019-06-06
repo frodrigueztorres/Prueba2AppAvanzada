@@ -49,22 +49,22 @@ namespace VistaPresentacion {
         protected global::System.Web.UI.WebControls.Label Label10;
         
         /// <summary>
-        /// Control txt_MatriculaCamion.
+        /// Control TextBox7.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_MatriculaCamion;
+        protected global::System.Web.UI.WebControls.TextBox TextBox7;
         
         /// <summary>
-        /// Control btn_SearchCamion.
+        /// Control btn_schCamion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_SearchCamion;
+        protected global::System.Web.UI.WebControls.Button btn_schCamion;
         
         /// <summary>
         /// Control Label11.
@@ -76,22 +76,22 @@ namespace VistaPresentacion {
         protected global::System.Web.UI.WebControls.Label Label11;
         
         /// <summary>
-        /// Control txt_PotenciaCamion.
+        /// Control TextBox8.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_PotenciaCamion;
+        protected global::System.Web.UI.WebControls.TextBox TextBox8;
         
         /// <summary>
-        /// Control btn_CleanCamion.
+        /// Control Button9.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_CleanCamion;
+        protected global::System.Web.UI.WebControls.Button Button9;
         
         /// <summary>
         /// Control Label12.
@@ -103,57 +103,48 @@ namespace VistaPresentacion {
         protected global::System.Web.UI.WebControls.Label Label12;
         
         /// <summary>
-        /// Control ddl_tipoCamion.
+        /// Control DropDownList1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_tipoCamion;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
         
         /// <summary>
-        /// Control btn_SaveCamion.
+        /// Control btn_guardarCamion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_SaveCamion;
+        protected global::System.Web.UI.WebControls.Button btn_guardarCamion;
         
         /// <summary>
-        /// Control btn_UpdateCamion.
+        /// Control Button5.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_UpdateCamion;
+        protected global::System.Web.UI.WebControls.Button Button5;
         
         /// <summary>
-        /// Control btn_DeleteCamion.
+        /// Control Button6.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_DeleteCamion;
+        protected global::System.Web.UI.WebControls.Button Button6;
         
         /// <summary>
-        /// Control btn_BackCamion.
+        /// Control btn_VolverCamion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_BackCamion;
-        
-        /// <summary>
-        /// Control lbl_msgCamion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_msgCamion;
+        protected global::System.Web.UI.WebControls.Button btn_VolverCamion;
     }
 }

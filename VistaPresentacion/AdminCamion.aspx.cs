@@ -15,28 +15,28 @@ namespace VistaPresentacion
 
         }
 
-        protected void btn_SaveCamion_Click(object sender, EventArgs e)
+        protected void Button8_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdminEncomienda.aspx");
+        }
+        //Revisar Boton Guardar
+        protected void Button7_Click(object sender, EventArgs e)
         {
             if (!Page.IsValid)
                 return;
 
-            string matricula = txt_MatriculaCamion.Text;
-            int potencia = Convert.ToInt32(txt_PotenciaCamion.Text);
-            //string descripcion = txt_descripcion.Text;
+            int id_producto = Convert.ToInt32(txt_id_producto.Text);
+            string producto = txt_producto.Text;
+            string descripcion = txt_descripcion.Text;
 
             LogicaCamion negocio = new LogicaCamion();
-            int resultado = negocio.InsertCamion(matricula, potencia, tipo);
+            int resultado = negocio.InsertCamion(id_producto, producto, descripcion);
 
             if (resultado > 0)
-                lbl_msgCamion.Text = "Registro agregado satisfactoriamente";
+                lbl_msg.Text = "Registro agregado satisfactoriamente";
             else
-                lbl_msgCamion.Text = "el registro a ingresar ya existe";
+                lbl_msg.Text = "el registro a ingresar ya existe";
             negocio = null;
-        }
-
-        protected void btn_BackCamion_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AdminEncomienda.aspx");
         }
     }
 }

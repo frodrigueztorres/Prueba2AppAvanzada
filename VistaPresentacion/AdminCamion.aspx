@@ -27,10 +27,10 @@
                         <asp:Label ID="Label10" runat="server" Text="Matricula"></asp:Label>
                     </td>
                     <td class="auto-style7">
-                        <asp:TextBox ID="txt_MatriculaCamion" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:Button ID="btn_SearchCamion" runat="server" Text="Buscar Camión" Width="207px" />
+                        <asp:Button ID="btn_schCamion" runat="server" Text="Buscar Camión" Width="207px" />
                     </td>
                 </tr>
                 <tr>
@@ -38,10 +38,10 @@
                         <asp:Label ID="Label11" runat="server" Text="Potencia"></asp:Label>
                     </td>
                     <td class="auto-style7">
-                        <asp:TextBox ID="txt_PotenciaCamion" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:Button ID="btn_CleanCamion" runat="server" Text="Limpiar Formulario" Width="207px" />
+                        <asp:Button ID="Button9" runat="server" Text="Limpiar Formulario" Width="207px" />
                     </td>
                 </tr>
                 <tr>
@@ -49,7 +49,7 @@
                         <asp:Label ID="Label12" runat="server" Text="Tipo de Camión"></asp:Label>
                     </td>
                     <td class="auto-style7">
-                        <asp:DropDownList ID="ddl_tipoCamion" runat="server">
+                        <asp:DropDownList ID="DropDownList1" runat="server">
                         </asp:DropDownList>
                     </td>
                     <td>
@@ -57,16 +57,13 @@
                 </tr>
             </table>
             <br />
-                        <asp:Button ID="btn_SaveCamion" runat="server" OnClick="btn_SaveCamion_Click" Text="Guardar" />
+                        <asp:Button ID="btn_guardarCamion" runat="server" Text="Guardar" OnClick="Button7_Click" />
 &nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btn_UpdateCamion" runat="server" Text="Actualizar" />
+                        <asp:Button ID="Button5" runat="server" Text="Actualizar" />
                     &nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btn_DeleteCamion" runat="server" Text="Eliminar" />
+                        <asp:Button ID="Button6" runat="server" Text="Eliminar" />
 &nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btn_BackCamion" runat="server" OnClick="btn_BackCamion_Click" Text="Volver" />
-            <br />
-            <br />
-            <asp:Label ID="lbl_msgCamion" runat="server"></asp:Label>
+                        <asp:Button ID="btn_VolverCamion" runat="server" OnClick="Button8_Click" Text="Volver" />
             <br />
         </div>
     </form>
