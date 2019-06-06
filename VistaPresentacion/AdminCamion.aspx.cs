@@ -83,6 +83,7 @@ namespace VistaPresentacion
             else
                 lbl_msgCamion.Text = "El registro no se pudo eliminar";
             negocio = null;
+            negocio2 = null;
         }
         //LIMPIAR REGISTROS
         protected void btn_CleanCamion_Click(object sender, EventArgs e)

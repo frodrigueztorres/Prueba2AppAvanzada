@@ -79,17 +79,23 @@ namespace VistaPresentacion
         {
             int rut = Convert.ToInt32(txt_RutCamionero.Text);
 
+            LogicaCamionCamionero negocio3 = new LogicaCamionCamionero();
+            int resultado3 = negocio3.UpdatePaqueteCamionero(rut);
+
             LogicaCamionCamionero negocio2 = new LogicaCamionCamionero();
             int resultado2 = negocio2.DeleteCamionCamioneroA(rut);
 
             LogicaCamionero negocio = new LogicaCamionero();
             int resultado = negocio.DeleteCamionero(rut);
 
-            if (resultado > 0 && resultado2 > 0)
+            if (resultado > 0 && resultado2 > 0 && resultado3 > 0)
                 lbl_msgCamionero.Text = "Registro eliminado satisfactoriamente";
             else
                 lbl_msgCamionero.Text = "El registro no se pudo eliminar";
+
             negocio = null;
+            negocio2 = null;
+            negocio3 = null;
 
         }
 
