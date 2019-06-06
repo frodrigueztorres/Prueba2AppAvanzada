@@ -67,7 +67,7 @@ namespace VistaPresentacion
 
             gw_GrillaEncomienda.DataSource = LogicaPaquete.SearchPaquete(cod_paquete);
             gw_GrillaEncomienda.DataBind();
-            //gw_GrillaEncomienda.Visible = false;
+            gw_GrillaEncomienda.Visible = false;
 
             txt_CodigoEncomienda.Text = gw_GrillaEncomienda.Rows[0].Cells[0].Text;
             txt_DescEncomienda.Text = gw_GrillaEncomienda.Rows[0].Cells[1].Text;
