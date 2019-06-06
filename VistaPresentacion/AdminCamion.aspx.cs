@@ -27,10 +27,14 @@ namespace VistaPresentacion
             LogicaCamion negocio = new LogicaCamion();
             int resultado = negocio.InsertCamion(matricula, tipo, potencia);
 
-            if (resultado > 0)
+            if (resultado > 0) {
                 lbl_msgCamion.Text = "Registro agregado satisfactoriamente";
-            else
+                CleanData();
+                CleanErrors();
+            }
+            else {
                 lbl_msgCamion.Text = "el registro a ingresar ya existe";
+            }  
             negocio = null;
         }
         //NAVEGAR PAGINAS
@@ -48,10 +52,14 @@ namespace VistaPresentacion
             LogicaCamion negocio = new LogicaCamion();
             int resultado = negocio.UpdateCamion(matricula, tipo, potencia);
 
-            if (resultado > 0)
+            if (resultado > 0) {
                 lbl_msgCamion.Text = "Registro actualizado satisfactoriamente";
-            else
+                CleanData();
+                CleanErrors();
+            }  
+            else {
                 lbl_msgCamion.Text = "No se pudo actualizar el registro";
+            }    
             negocio = null;
         }
         //BUSCAR CAMION
@@ -78,17 +86,38 @@ namespace VistaPresentacion
             LogicaCamion negocio = new LogicaCamion();
             int resultado = negocio.DeleteCamion(matricula);
 
-            if (resultado > 0 && resultado2 >0)
+            if (resultado > 0 && resultado2 > 0) {
                 lbl_msgCamion.Text = "Registro eliminado satisfactoriamente";
-            else
+                CleanData();
+                CleanErrors();
+            }          
+            else{
                 lbl_msgCamion.Text = "El registro no se pudo eliminar";
+            }                
             negocio = null;
             negocio2 = null;
         }
         //LIMPIAR REGISTROS
         protected void btn_CleanCamion_Click(object sender, EventArgs e)
         {
-            //Crear Metodo Limpiar
+            CleanData();
+            CleanLabels();
+            CleanErrors();
+        }
+
+        public void CleanData()
+        {
+            txt_MatriculaCamion.Text = "";
+            ddl_tipoCamion.SelectedIndex = 0;
+            txt_PotenciaCamion.Text = "";           
+        }
+
+        public void CleanLabels()
+        {
+            lbl_msgCamion.Text = "";
+        }
+        public void CleanErrors()
+        {
         }
     }
 }

@@ -98,7 +98,7 @@
                         <asp:Label ID="Label7" runat="server" Text="Provincia de destino"></asp:Label>
                     </td>
                     <td class="auto-style1">
-                        <asp:DropDownList ID="ddl_ProvEncomienda" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource4" DataTextField="Nombre" DataValueField="Cod_Provincia" Width="168px" OnSelectedIndexChanged="ddl_ProvEncomienda_SelectedIndexChanged">
+                        <asp:DropDownList ID="ddl_ProvEncomienda" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource4" DataTextField="Nombre" DataValueField="Cod_Provincia" Width="168px">
                         </asp:DropDownList>
                         <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:Prueba3ConnectionString %>" SelectCommand="SELECT * FROM [Provincia] ORDER BY [Cod_Provincia]"></asp:SqlDataSource>
                     </td>

@@ -31,10 +31,14 @@ namespace VistaPresentacion
             LogicaCamionero negocio = new LogicaCamionero();
             int resultado = negocio.InsertCamionero(rut, dv, nombre, telefono, direccion, salario, poblacion);
 
-            if (resultado > 0)
+            if (resultado > 0) {
                 lbl_msgCamionero.Text = "Registro agregado satisfactoriamente";
-            else
+                CleanData();
+                CleanErrors();
+            }             
+            else{
                 lbl_msgCamionero.Text = "El registro a ingresar ya existe";
+            }    
             negocio = null;
         }
 
@@ -52,9 +56,15 @@ namespace VistaPresentacion
             int resultado = negocio.UpdateCamionero(rut, dv, nombre, telefono, direccion, salario, poblacion);
 
             if (resultado > 0)
+            {
                 lbl_msgCamionero.Text = "Registro actualizado satisfactoriamente";
-            else
+                CleanData();
+                CleanErrors();
+            }
+
+            else {
                 lbl_msgCamionero.Text = "El registro no se pudo actualizar";
+            }   
             negocio = null;
         }
 
@@ -88,11 +98,15 @@ namespace VistaPresentacion
             LogicaCamionero negocio = new LogicaCamionero();
             int resultado = negocio.DeleteCamionero(rut);
 
-            if (resultado > 0 && resultado2 > 0 && resultado3 > 0)
+            if (resultado > 0 && resultado2 > 0 && resultado3 > 0) {
                 lbl_msgCamionero.Text = "Registro eliminado satisfactoriamente";
-            else
+                CleanData();
+                CleanErrors();
+            }
+                
+            else{
                 lbl_msgCamionero.Text = "El registro no se pudo eliminar";
-
+            }
             negocio = null;
             negocio2 = null;
             negocio3 = null;
@@ -101,12 +115,32 @@ namespace VistaPresentacion
 
         protected void btn_CleanCamionero_Click(object sender, EventArgs e)
         {
-            //REALIZAR COMANDOS LIMPIAR AL CAMIONERO
+            CleanData();
+            CleanErrors();
+            CleanLabels();
         }
 
         protected void btn_BackCamionero_Click(object sender, EventArgs e)
         {
             Response.Redirect("AdminEncomienda.aspx");
+        }
+        public void CleanData()
+        {
+            txt_RutCamionero.Text = "";
+            txt_DvCamionero.Text = "";
+            txt_NombreCamionero.Text = "";
+            txt_TelefonoCamionero.Text = "";
+            txt_DireccionCamionero.Text = "";
+            txt_SalarioCamionero.Text = "";
+            txt_PoblacionCamionero.Text = "";
+        }
+
+        public void CleanLabels()
+        {
+            lbl_msgCamionero.Text = "";
+        }
+        public void CleanErrors()
+        {
         }
     }
 }
