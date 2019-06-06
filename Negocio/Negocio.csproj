@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LogicaCamion.cs" />
+    <Compile Include="LogicaCamionCamionero.cs" />
     <Compile Include="LogicaCamionero.cs" />
     <Compile Include="LogicaPaquete.cs" />
     <Compile Include="LogicaVerificacion.cs" />

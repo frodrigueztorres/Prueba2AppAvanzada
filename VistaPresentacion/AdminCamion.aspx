@@ -41,7 +41,7 @@
                         <asp:TextBox ID="txt_PotenciaCamion" runat="server"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:Button ID="btn_CleanCamion" runat="server" Text="Limpiar Formulario" Width="207px" />
+                        <asp:Button ID="btn_CleanCamion" runat="server" Text="Limpiar Formulario" Width="207px" OnClick="btn_CleanCamion_Click" />
                     </td>
                 </tr>
                 <tr>
@@ -51,7 +51,7 @@
                     <td class="auto-style7">
                         <asp:DropDownList ID="ddl_tipoCamion" runat="server" DataSourceID="SqlDataSource1" DataTextField="Nombre" DataValueField="Tipo">
                         </asp:DropDownList>
-                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Prueba3ConnectionString %>" SelectCommand="SELECT * FROM [Tipo_Camion]"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Prueba3ConexionPC %>" SelectCommand="SELECT * FROM [Tipo_Camion]"></asp:SqlDataSource>
                     </td>
                     <td>
                         &nbsp;</td>

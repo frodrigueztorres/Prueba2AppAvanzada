@@ -36,12 +36,12 @@ namespace Datos
             return MetodoDatos.ManejoTablas(cmd);
         }
         //ELIMINAR DATOS DEL CAMION
-        public int DeleteCamion(int id_camion)
+        public int DeleteCamion(string matricula)
         {
             SqlCommand cmd = MetodoDatos.CrearComando();
-            cmd.CommandText = "delete from Camiones where Id_Camion = @id_camion";
+            cmd.CommandText = "delete from Camiones where Matricula=@matricula";
 
-            cmd.Parameters.AddWithValue("@id_camion", id_camion);
+            cmd.Parameters.AddWithValue("@matricula", matricula);
 
             return MetodoDatos.ManejoTablas(cmd);
         }
