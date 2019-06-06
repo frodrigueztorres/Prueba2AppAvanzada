@@ -112,6 +112,15 @@ namespace VistaPresentacion {
         protected global::System.Web.UI.WebControls.DropDownList ddl_tipoCamion;
         
         /// <summary>
+        /// Control SqlDataSource1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        
+        /// <summary>
         /// Control btn_SaveCamion.
         /// </summary>
         /// <remarks>
@@ -155,5 +164,14 @@ namespace VistaPresentacion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_msgCamion;
+        
+        /// <summary>
+        /// Control gw_GrillaCamion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gw_GrillaCamion;
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Negocio
 {
-    class LogicaVerificacion
+    public class LogicaVerificacion
     {
     }
 }

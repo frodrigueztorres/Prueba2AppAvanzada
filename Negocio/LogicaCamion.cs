@@ -10,21 +10,21 @@ namespace Negocio
 {
     public class LogicaCamion
     {
-        public int InsertCamion(int id_camion, string matricula, int tipo, int potencia)
+        public int InsertCamion(string matricula, int tipo, int potencia)
         {
             AccesoDatosCamion acceso = new AccesoDatosCamion();
-            return acceso.InsertCamion (id_camion, matricula, tipo, potencia);
+            return acceso.InsertCamion (matricula, tipo, potencia);
         }
         // Consultar
-        public static DataTable SearchCamion(int id_camion)
+        public static DataTable SearchCamion (string matricula)
         {
-            return AccesoDatosCamion.ListCamion (id_camion);
+            return AccesoDatosCamion.ListCamion (matricula);
         }
         // Actualizar
-        public int UpdateCamion(int id_camion, string matricula, int tipo, int potencia)
+        public int UpdateCamion(string matricula, int tipo, int potencia)
         {
             AccesoDatosCamion acceso = new AccesoDatosCamion();
-            return acceso.UpdateCamion(id_camion, matricula, tipo, potencia);
+            return acceso.UpdateCamion(matricula, tipo, potencia);
         }
         // Eliminar
         public int DeleteCamion(int id_camion)
