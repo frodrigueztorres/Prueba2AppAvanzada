@@ -12,25 +12,23 @@ namespace Datos
     public class AccesoDatosCamion
     {
         //INSERTAR DATOS DEL CAMION
-        public int InsertCamion(int id_camion, string matricula, int tipo, int potencia)
+        public int InsertCamion(string matricula, int tipo, int potencia)
         {
             SqlCommand cmd = MetodoDatos.CrearComando();
-            cmd.CommandText = "insert into Camiones (Id_Camion, Matricula, Tipo, Potencia) values (@id_camion, @matricula, @tipo, @potencia)";
+            cmd.CommandText = "insert into Camiones (Matricula, Tipo, Potencia) values (@matricula, @tipo, @potencia)";
 
-            cmd.Parameters.AddWithValue("@id_camion", id_camion);
-            cmd.Parameters.AddWithValue("@matricula", matricula);
-            cmd.Parameters.AddWithValue("@tipo", tipo);
-            cmd.Parameters.AddWithValue("@potencia", potencia);
+            cmd.Parameters.Add("@matricula", matricula);
+            cmd.Parameters.Add("@tipo", tipo);
+            cmd.Parameters.Add("@potencia", potencia);
 
             return MetodoDatos.ManejoTablas(cmd);
         }
         //MODIFICAR DATOS DEL CAMION
-        public int UpdateCamion(int id_camion, string matricula, int tipo, int potencia)
+        public int UpdateCamion(string matricula, int tipo, int potencia)
         {
             SqlCommand cmd = MetodoDatos.CrearComando();
-            cmd.CommandText = "update Camiones set Matricula=@matricula, Tipo=@tipo, Potencia=@potencia where Id_Camion = @id_camion";
+            cmd.CommandText = "update Camiones set Tipo=@tipo, Potencia=@potencia where Matricula=@matricula";
 
-            cmd.Parameters.AddWithValue("@id_camion", id_camion);
             cmd.Parameters.AddWithValue("@matricula", matricula);
             cmd.Parameters.AddWithValue("@tipo", tipo);
             cmd.Parameters.AddWithValue("@potencia", potencia);
@@ -48,12 +46,12 @@ namespace Datos
             return MetodoDatos.ManejoTablas(cmd);
         }
         //BUSCAR Y LISTAR DATOS DEL CAMION
-        public static DataTable ListCamion(int id_camion)
+        public static DataTable ListCamion(string matricula)
         {
             SqlCommand cmd = MetodoDatos.CrearComando();
-            cmd.CommandText = "select * from Camiones where  Id_Camion = @id_camion";
+            cmd.CommandText = "select * from Camiones where  Matricula = @matricula";
 
-            cmd.Parameters.AddWithValue("@id_camion", id_camion);
+            cmd.Parameters.AddWithValue("@matricula", matricula);
             return MetodoDatos.ConsultaDatos(cmd);
         }
     }

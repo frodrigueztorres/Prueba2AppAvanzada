@@ -30,7 +30,7 @@
                         <asp:TextBox ID="txt_MatriculaCamion" runat="server"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:Button ID="btn_SearchCamion" runat="server" Text="Buscar Camión" Width="207px" />
+                        <asp:Button ID="btn_SearchCamion" runat="server" Text="Buscar Camión" Width="207px" OnClick="btn_SearchCamion_Click" />
                     </td>
                 </tr>
                 <tr>
@@ -49,8 +49,9 @@
                         <asp:Label ID="Label12" runat="server" Text="Tipo de Camión"></asp:Label>
                     </td>
                     <td class="auto-style7">
-                        <asp:DropDownList ID="ddl_tipoCamion" runat="server">
+                        <asp:DropDownList ID="ddl_tipoCamion" runat="server" DataSourceID="SqlDataSource1" DataTextField="Nombre" DataValueField="Tipo">
                         </asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Prueba3ConnectionString %>" SelectCommand="SELECT * FROM [Tipo_Camion]"></asp:SqlDataSource>
                     </td>
                     <td>
                         &nbsp;</td>
@@ -59,14 +60,17 @@
             <br />
                         <asp:Button ID="btn_SaveCamion" runat="server" OnClick="btn_SaveCamion_Click" Text="Guardar" />
 &nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btn_UpdateCamion" runat="server" Text="Actualizar" />
+                        <asp:Button ID="btn_UpdateCamion" runat="server" Text="Actualizar" OnClick="btn_UpdateCamion_Click" />
                     &nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btn_DeleteCamion" runat="server" Text="Eliminar" />
+                        <asp:Button ID="btn_DeleteCamion" runat="server" Text="Eliminar" OnClick="btn_DeleteCamion_Click" />
 &nbsp;&nbsp;&nbsp;
                         <asp:Button ID="btn_BackCamion" runat="server" OnClick="btn_BackCamion_Click" Text="Volver" />
             <br />
             <br />
             <asp:Label ID="lbl_msgCamion" runat="server"></asp:Label>
+            <br />
+            <asp:GridView ID="gw_GrillaCamion" runat="server">
+            </asp:GridView>
             <br />
         </div>
     </form>
