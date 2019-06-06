@@ -27,10 +27,10 @@ namespace Negocio
             return acceso.UpdateCamion(matricula, tipo, potencia);
         }
         // Eliminar
-        public int DeleteCamion(int id_camion)
+        public int DeleteCamion(string matricula)
         {
             AccesoDatosCamion acceso = new AccesoDatosCamion();
-            return acceso.DeleteCamion(id_camion);
+            return acceso.DeleteCamion(matricula);
         }
     }
 }

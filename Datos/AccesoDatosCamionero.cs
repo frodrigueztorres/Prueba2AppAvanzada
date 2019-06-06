@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Datos
 {
-    class AccesoDatosCamionero
+    public class AccesoDatosCamionero
     {
         //INSERTAR DATOS DEL CAMIONERO
         public int InsertCamionero(int rut, string dv, string nombre, int telefono, string direccion, int salario, string poblacion)

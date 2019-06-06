@@ -41,12 +41,12 @@
                         <asp:Label ID="Label3" runat="server" Text="RUT"></asp:Label>
                     </td>
                     <td class="auto-style2">
-                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txt_RutCamionero" runat="server"></asp:TextBox>
                     &nbsp;<asp:Label ID="Label13" runat="server" Text="-"></asp:Label>
-&nbsp;<asp:TextBox ID="TextBox9" runat="server" Width="20px"></asp:TextBox>
+&nbsp;<asp:TextBox ID="txt_DvCamionero" runat="server" Width="20px"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:Button ID="Button1" runat="server" Text="Buscar Camionero" Width="207px" />
+                        <asp:Button ID="btn_SearchCamionero" runat="server" Text="Buscar Camionero" Width="207px" OnClick="btn_SearchCamionero_Click" />
                     </td>
                 </tr>
                 <tr>
@@ -54,10 +54,10 @@
                         <asp:Label ID="Label4" runat="server" Text="Nombre"></asp:Label>
                     </td>
                     <td class="auto-style2">
-                        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txt_NombreCamionero" runat="server"></asp:TextBox>
                     </td>
                     <td>
-            <asp:Button ID="Button8" runat="server" Text="Limpiar Formulario" Width="207px" />
+            <asp:Button ID="btn_CleanCamionero" runat="server" Text="Limpiar Formulario" Width="207px" OnClick="btn_CleanCamionero_Click" />
                     </td>
                 </tr>
                 <tr>
@@ -65,7 +65,7 @@
                         <asp:Label ID="Label5" runat="server" Text="Teléfono"></asp:Label>
                     </td>
                     <td class="auto-style4">
-                        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txt_TelefonoCamionero" runat="server"></asp:TextBox>
                     </td>
                     <td class="auto-style5">
                         &nbsp;</td>
@@ -75,7 +75,7 @@
                         <asp:Label ID="Label6" runat="server" Text="Dirección"></asp:Label>
                     </td>
                     <td class="auto-style2">
-                        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txt_DireccionCamionero" runat="server"></asp:TextBox>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
@@ -84,7 +84,7 @@
                         <asp:Label ID="Label7" runat="server" Text="Salario"></asp:Label>
                     </td>
                     <td class="auto-style2">
-                        <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txt_SalarioCamionero" runat="server"></asp:TextBox>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
@@ -93,7 +93,7 @@
                         <asp:Label ID="Label8" runat="server" Text="Población"></asp:Label>
                     </td>
                     <td class="auto-style2">
-                        <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txt_PoblacionCamionero" runat="server"></asp:TextBox>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
@@ -106,13 +106,19 @@
                 </tr>
                 </table>
             <br />
-            <asp:Button ID="Button7" runat="server" Text="Guardar" />
+            <asp:Button ID="btn_SaveCamionero" runat="server" Text="Guardar" OnClick="btn_SaveCamionero_Click" />
 &nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="Button2" runat="server" Text="Actualizar" />
+                        <asp:Button ID="btn_UpdateCamionero" runat="server" Text="Actualizar" OnClick="btn_UpdateCamionero_Click" />
                     &nbsp;&nbsp;&nbsp;
-            <asp:Button ID="Button10" runat="server" Text="Eliminar" />
+            <asp:Button ID="btn_DeleteCamionero" runat="server" Text="Eliminar" OnClick="btn_DeleteCamionero_Click" />
 &nbsp;&nbsp;&nbsp;
-            <asp:Button ID="Button9" runat="server" Text="Volver" OnClick="Button9_Click" />
+            <asp:Button ID="btn_BackCamionero" runat="server" OnClick="btn_BackCamionero_Click" Text="Volver" />
+            <br />
+            <br />
+            <asp:Label ID="lbl_msgCamionero" runat="server"></asp:Label>
+            <br />
+            <asp:GridView ID="gw_GrillaCamionero" runat="server">
+            </asp:GridView>
             <br />
         </div>
     </form>

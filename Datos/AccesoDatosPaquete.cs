@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Datos
 {
-    class AccesoDatosPaquete
+    public class AccesoDatosPaquete
     {
         //INSERTAR DATOS DEL PAQUETE
         public int InsertPaquete(int cod_paquete, string descripcion, string destinatario, string direcdestinatario, int codcomuna, int rut)
@@ -50,10 +50,10 @@ namespace Datos
             return MetodoDatos.ManejoTablas(cmd);
         }
         //BUSCAR Y LISTAR DATOS DEL CAMIONERO
-        public static DataTable ListCamionero(int cod_paquete)
+        public static DataTable ListPaquete(int cod_paquete)
         {
             SqlCommand cmd = MetodoDatos.CrearComando();
-            cmd.CommandText = "select * from Paquete where Cod_Paquete=@cod_paquete";
+            cmd.CommandText = "select a.*, f.Id_Camion, c.Cod_Provincia from Paquete a join Comuna b on a.Cod_Comuna = b.Cod_Comuna join Provincia c on c.Cod_Provincia = b.Cod_Provincia join Camionero d on d.Rut = a.Rut join Camion_Camionero e on e.Rut = d.Rut join Camiones f on f.Id_Camion = e.Id_Camion where Cod_Paquete=@cod_paquete";
 
             cmd.Parameters.Add("@cod_paquete", cod_paquete);
 

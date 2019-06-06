@@ -67,10 +67,27 @@ namespace VistaPresentacion
             ddl_tipoCamion.SelectedValue = gw_GrillaCamion.Rows[0].Cells[2].Text;
             txt_PotenciaCamion.Text = gw_GrillaCamion.Rows[0].Cells[3].Text;
         }
-
+        //ELIMINAR CAMION
         protected void btn_DeleteCamion_Click(object sender, EventArgs e)
         {
+            string matricula = txt_MatriculaCamion.Text;
 
+            LogicaCamionCamionero negocio2 = new LogicaCamionCamionero();
+            int resultado2 = negocio2.DeleteCamionCamioneroB(matricula);
+
+            LogicaCamion negocio = new LogicaCamion();
+            int resultado = negocio.DeleteCamion(matricula);
+
+            if (resultado > 0 && resultado2 >0)
+                lbl_msgCamion.Text = "Registro eliminado satisfactoriamente";
+            else
+                lbl_msgCamion.Text = "El registro no se pudo eliminar";
+            negocio = null;
+        }
+        //LIMPIAR REGISTROS
+        protected void btn_CleanCamion_Click(object sender, EventArgs e)
+        {
+            //Crear Metodo Limpiar
         }
     }
 }
