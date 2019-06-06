@@ -26,6 +26,12 @@ namespace Negocio
             AccesoDatosCamionCamionero acceso = new AccesoDatosCamionCamionero();
             return acceso.DeleteCamionCamioneroB(matricula);
         }
+        // Actualizar Tabla Paquete
+        public int UpdatePaqueteCamionero(int rut)
+        {
+            AccesoDatosCamionCamionero acceso = new AccesoDatosCamionCamionero();
+            return acceso.UpdatePaqueteCamionero(rut);
+        }
 
     }
 }

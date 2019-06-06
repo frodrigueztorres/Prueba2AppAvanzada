@@ -36,9 +36,19 @@ namespace Datos
         public int DeleteCamionCamioneroB(string matricula)
         {
             SqlCommand cmd = MetodoDatos.CrearComando();
-            cmd.CommandText = "delete select * from Camion_Camionero where Id_Camion in (select Id_Camion from Camiones where Matricula = @matricula)";
+            cmd.CommandText = "delete from Camion_Camionero where Id_Camion in (select Id_Camion from Camiones where Matricula = @matricula)";
 
             cmd.Parameters.AddWithValue("@matricula", matricula);
+
+            return MetodoDatos.ManejoTablas(cmd);
+        }
+        //MODIFICAR DATOS CAMIONERO EN PAQUETE
+        public int UpdatePaqueteCamionero(int rut)
+        {
+            SqlCommand cmd = MetodoDatos.CrearComando();
+            cmd.CommandText = "update Paquete set Rut = null where rut = @rut";
+
+            cmd.Parameters.Add("@rut", rut);
 
             return MetodoDatos.ManejoTablas(cmd);
         }

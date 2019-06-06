@@ -63,20 +63,33 @@ namespace VistaPresentacion
 
         protected void btn_SearchEncomienda_Click(object sender, EventArgs e)
         {
-                int cod_paquete = Convert.ToInt32(txt_CodigoEncomienda.Text);
+            int cod_paquete = Convert.ToInt32(txt_CodigoEncomienda.Text);
 
-                gw_GrillaEncomienda.DataSource = LogicaPaquete.SearchPaquete(cod_paquete);
-                gw_GrillaEncomienda.DataBind();
-                gw_GrillaEncomienda.Visible = false;
+            gw_GrillaEncomienda.DataSource = LogicaPaquete.SearchPaquete(cod_paquete);
+            gw_GrillaEncomienda.DataBind();
+            gw_GrillaEncomienda.Visible = false;
 
-                txt_CodigoEncomienda.Text = gw_GrillaEncomienda.Rows[0].Cells[0].Text;
-                txt_DescEncomienda.Text = gw_GrillaEncomienda.Rows[0].Cells[1].Text;
-                txt_NombreEncomienda.Text = gw_GrillaEncomienda.Rows[0].Cells[2].Text;
-                txt_DireccionEncomienda.Text = gw_GrillaEncomienda.Rows[0].Cells[3].Text;
-                ddl_ProvEncomienda.SelectedValue = gw_GrillaEncomienda.Rows[0].Cells[7].Text;
-                ddl_CameroEncomienda.SelectedValue = gw_GrillaEncomienda.Rows[0].Cells[5].Text;
-                ddl_CamionEncomienda.SelectedValue = gw_GrillaEncomienda.Rows[0].Cells[6].Text;
-                //ddl_ComuEncomienda.SelectedValue = gw_GrillaEncomienda.Rows[0].Cells[4].Text;
+            txt_CodigoEncomienda.Text = gw_GrillaEncomienda.Rows[0].Cells[0].Text;
+            txt_DescEncomienda.Text = gw_GrillaEncomienda.Rows[0].Cells[1].Text;
+            txt_NombreEncomienda.Text = gw_GrillaEncomienda.Rows[0].Cells[2].Text;
+            txt_DireccionEncomienda.Text = gw_GrillaEncomienda.Rows[0].Cells[3].Text;
+            ddl_ProvEncomienda.SelectedValue = gw_GrillaEncomienda.Rows[0].Cells[5].Text;
+            if (gw_GrillaEncomienda.Rows[0].Cells[6].Text == "&nbsp;")
+            {
+                ddl_CameroEncomienda.SelectedIndex = 0;
+            }
+            else
+            {
+                ddl_CameroEncomienda.SelectedValue = gw_GrillaEncomienda.Rows[0].Cells[6].Text;
+            }
+            if (gw_GrillaEncomienda.Rows[0].Cells[7].Text == "&nbsp;")
+            {
+                ddl_CamionEncomienda.SelectedIndex = 0;
+            }
+            else
+            {
+                ddl_CamionEncomienda.SelectedValue = gw_GrillaEncomienda.Rows[0].Cells[7].Text;
+            }
         }
 
         protected void btn_CleanEncomienda_Click(object sender, EventArgs e)
@@ -106,6 +119,11 @@ namespace VistaPresentacion
             else
                 lbl_msgEncomienda.Text = "El registro no se pudo eliminar";
             negocio = null;
+        }
+
+        protected void ddl_ProvEncomienda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ddl_ComuEncomienda.SelectedValue = gw_GrillaEncomienda.Rows[0].Cells[4].Text;
         }
     }
 }
