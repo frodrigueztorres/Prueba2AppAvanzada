@@ -24,6 +24,13 @@
         .auto-style5 {
             height: 29px;
         }
+        .auto-style6 {
+            width: 601px;
+        }
+        .auto-style7 {
+            height: 29px;
+            width: 601px;
+        }
         </style>
 </head>
 <body>
@@ -41,9 +48,14 @@
                         <asp:Label ID="Label3" runat="server" Text="RUT"></asp:Label>
                     </td>
                     <td class="auto-style2">
-                        <asp:TextBox ID="txt_RutCamionero" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txt_RutCamionero" runat="server" MaxLength="9"></asp:TextBox>
                     &nbsp;<asp:Label ID="Label13" runat="server" Text="-"></asp:Label>
-&nbsp;<asp:TextBox ID="txt_DvCamionero" runat="server" Width="20px"></asp:TextBox>
+&nbsp;<asp:TextBox ID="txt_DvCamionero" runat="server" Width="20px" MaxLength="1"></asp:TextBox>
+                    </td>
+                    <td class="auto-style6">
+                        <asp:Label ID="MsgRut" runat="server"></asp:Label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="MsgDv" runat="server"></asp:Label>
                     </td>
                     <td>
                         <asp:Button ID="btn_SearchCamionero" runat="server" Text="Buscar Camionero" Width="207px" OnClick="btn_SearchCamionero_Click" />
@@ -56,6 +68,9 @@
                     <td class="auto-style2">
                         <asp:TextBox ID="txt_NombreCamionero" runat="server"></asp:TextBox>
                     </td>
+                    <td class="auto-style6">
+                        <asp:Label ID="MsgNombre" runat="server"></asp:Label>
+                    </td>
                     <td>
             <asp:Button ID="btn_CleanCamionero" runat="server" Text="Limpiar Formulario" Width="207px" OnClick="btn_CleanCamionero_Click" />
                     </td>
@@ -67,6 +82,9 @@
                     <td class="auto-style4">
                         <asp:TextBox ID="txt_TelefonoCamionero" runat="server"></asp:TextBox>
                     </td>
+                    <td class="auto-style7">
+                        <asp:Label ID="MsgTelefono" runat="server"></asp:Label>
+                    </td>
                     <td class="auto-style5">
                         &nbsp;</td>
                 </tr>
@@ -77,6 +95,9 @@
                     <td class="auto-style2">
                         <asp:TextBox ID="txt_DireccionCamionero" runat="server"></asp:TextBox>
                     </td>
+                    <td class="auto-style6">
+                        <asp:Label ID="MsgDireccion" runat="server"></asp:Label>
+                    </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
@@ -85,6 +106,9 @@
                     </td>
                     <td class="auto-style2">
                         <asp:TextBox ID="txt_SalarioCamionero" runat="server"></asp:TextBox>
+                    </td>
+                    <td class="auto-style6">
+                        <asp:Label ID="MsgSalario" runat="server"></asp:Label>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
@@ -95,6 +119,9 @@
                     <td class="auto-style2">
                         <asp:TextBox ID="txt_PoblacionCamionero" runat="server"></asp:TextBox>
                     </td>
+                    <td class="auto-style6">
+                        <asp:Label ID="MsgPoblacion" runat="server"></asp:Label>
+                    </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
@@ -102,6 +129,7 @@
                         &nbsp;</td>
                     <td class="auto-style2">
                         &nbsp;</td>
+                    <td class="auto-style6">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 </table>

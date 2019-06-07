@@ -15,74 +15,244 @@ namespace VistaPresentacion
 
         }
 
+        public bool IsNumeric(String num)
+        {
+            try
+            {
+                double x = Convert.ToDouble(num);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool validacion()
+        {
+            bool valRut = false;
+            bool valDv = false;
+            bool valNombre = false;
+            bool valTelefono = false;
+            bool valDomicilio = false;
+            bool valSalario = false;
+            bool valPoblacion = false;
+
+            if (txt_RutCamionero.Text == "" || txt_RutCamionero.Text == null)
+            {
+                MsgRut.Text = "Debe ingresar un valor en campo Rut";
+            }
+            else if(!IsNumeric(txt_RutCamionero.Text))
+            {
+                MsgRut.Text = "Debe ingresar solo numeros en el campo rut";
+            }
+            else
+            {
+                MsgRut.Text = "";
+                valRut = true;
+
+            }
+
+            if(txt_DvCamionero.Text == "" || txt_DvCamionero.Text == null)
+            {
+                MsgDv.Text = "Debe ingresar un valor en el campo DV";
+            }
+            else if(!IsNumeric(txt_DvCamionero.Text) || txt_DvCamionero.Text != "K")
+            {
+                MsgDv.Text = "Debe ingresar un valor valido en DV";
+            }
+            else
+            {
+                MsgDv.Text = "";
+                valDv = true;
+            }
+
+            if(txt_NombreCamionero.Text == "" || txt_NombreCamionero.Text == null)
+            {
+                MsgNombre.Text = "Debe ingresar un nombre";
+            }
+            else
+            {
+                MsgNombre.Text = "";
+                valNombre = true;
+            }
+
+            if(txt_TelefonoCamionero.Text == "" || txt_TelefonoCamionero.Text == null)
+            {
+                MsgTelefono.Text = "Debe ingresar un valor en el campo telefono";
+            }else if (!IsNumeric(txt_TelefonoCamionero.Text))
+            {
+                MsgTelefono.Text = "Debe ingresar solo numeros en el campo telefono";
+            }
+            else
+            {
+                MsgTelefono.Text = "";
+                valTelefono = true;
+            }
+
+            if(txt_DireccionCamionero.Text == "" || txt_DireccionCamionero.Text == null)
+            {
+                MsgDireccion.Text = "Debe ingresar una direccion";
+            }
+            else
+            {
+                MsgDireccion.Text = "";
+                valDomicilio = true;
+            }
+
+            if(txt_SalarioCamionero.Text == "" || txt_SalarioCamionero.Text == null)
+            {
+                MsgSalario.Text = "Debe ingresar un monto en el campo Salario";
+            }else if (!IsNumeric(txt_SalarioCamionero.Text))
+            {
+                MsgSalario.Text = "Debe ingresar solo numeros";
+            }
+            else
+            {
+                MsgSalario.Text = "";
+                valSalario = true;
+            }
+
+            if(txt_PoblacionCamionero.Text == "" || txt_PoblacionCamionero.Text == null)
+            {
+                MsgPoblacion.Text = "Debe ingresar un poblacion";
+
+            }
+            else
+            {
+                MsgPoblacion.Text = "";
+                valPoblacion = true;
+            }
+
+            if(valRut && valDv && valNombre && valTelefono && valDomicilio && valSalario && valPoblacion)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        
         protected void btn_SaveCamionero_Click(object sender, EventArgs e)
         {
             if (!Page.IsValid)
                 return;
 
-            int rut = Convert.ToInt32(txt_RutCamionero.Text);
-            string dv = txt_DvCamionero.Text;
-            string nombre = txt_NombreCamionero.Text;
-            int telefono = Convert.ToInt32(txt_TelefonoCamionero.Text);
-            string direccion = txt_DireccionCamionero.Text;
-            int salario = Convert.ToInt32(txt_SalarioCamionero.Text);
-            string poblacion = txt_PoblacionCamionero.Text;
+            if(validacion() == true)
+            {
+                int rut = Convert.ToInt32(txt_RutCamionero.Text);
+                string dv = txt_DvCamionero.Text;
+                string nombre = txt_NombreCamionero.Text;
+                int telefono = Convert.ToInt32(txt_TelefonoCamionero.Text);
+                string direccion = txt_DireccionCamionero.Text;
+                int salario = Convert.ToInt32(txt_SalarioCamionero.Text);
+                string poblacion = txt_PoblacionCamionero.Text;
 
-            LogicaCamionero negocio = new LogicaCamionero();
-            int resultado = negocio.InsertCamionero(rut, dv, nombre, telefono, direccion, salario, poblacion);
+                LogicaCamionero negocio = new LogicaCamionero();
+                int resultado = negocio.InsertCamionero(rut, dv, nombre, telefono, direccion, salario, poblacion);
 
-            if (resultado > 0) {
-                lbl_msgCamionero.Text = "Registro agregado satisfactoriamente";
-                CleanData();
-                CleanErrors();
-            }             
-            else{
-                lbl_msgCamionero.Text = "El registro a ingresar ya existe";
-            }    
-            negocio = null;
+                if (resultado > 0)
+                {
+                    lbl_msgCamionero.Text = "Registro agregado satisfactoriamente";
+                    CleanData();
+                    CleanErrors();
+                }
+                else
+                {
+                    lbl_msgCamionero.Text = "El registro a ingresar ya existe";
+                }
+                negocio = null;
+            }
+
+            
         }
 
         protected void btn_UpdateCamionero_Click(object sender, EventArgs e)
         {
-            int rut = Convert.ToInt32(txt_RutCamionero.Text);
-            string dv = txt_DvCamionero.Text;
-            string nombre = txt_NombreCamionero.Text;
-            int telefono = Convert.ToInt32(txt_TelefonoCamionero.Text);
-            string direccion = txt_DireccionCamionero.Text;
-            int salario = Convert.ToInt32(txt_SalarioCamionero.Text);
-            string poblacion = txt_PoblacionCamionero.Text;
-
-            LogicaCamionero negocio = new LogicaCamionero();
-            int resultado = negocio.UpdateCamionero(rut, dv, nombre, telefono, direccion, salario, poblacion);
-
-            if (resultado > 0)
+            if(validacion() == true)
             {
-                lbl_msgCamionero.Text = "Registro actualizado satisfactoriamente";
-                CleanData();
-                CleanErrors();
-            }
+                try
+                {
+                    int rut = Convert.ToInt32(txt_RutCamionero.Text);
+                    string dv = txt_DvCamionero.Text;
+                    string nombre = txt_NombreCamionero.Text;
+                    int telefono = Convert.ToInt32(txt_TelefonoCamionero.Text);
+                    string direccion = txt_DireccionCamionero.Text;
+                    int salario = Convert.ToInt32(txt_SalarioCamionero.Text);
+                    string poblacion = txt_PoblacionCamionero.Text;
 
-            else {
-                lbl_msgCamionero.Text = "El registro no se pudo actualizar";
-            }   
-            negocio = null;
+                    LogicaCamionero negocio = new LogicaCamionero();
+                    int resultado = negocio.UpdateCamionero(rut, dv, nombre, telefono, direccion, salario, poblacion);
+
+                    if (resultado > 0)
+                    {
+                        lbl_msgCamionero.Text = "Registro actualizado satisfactoriamente";
+                        CleanData();
+                        CleanErrors();
+                    }
+
+                    else
+                    {
+                        lbl_msgCamionero.Text = "El registro no se pudo actualizar";
+                    }
+                    negocio = null;
+                }catch(Exception ex)
+                {
+
+                }
+               
+            }
+            
         }
 
         protected void btn_SearchCamionero_Click(object sender, EventArgs e)
         {
-            int rut = Convert.ToInt32(txt_RutCamionero.Text);
 
-            gw_GrillaCamionero.DataSource = LogicaCamionero.SearchCamionero(rut);
-            gw_GrillaCamionero.DataBind();
-            gw_GrillaCamionero.Visible = false;
+            
+            
+                
+                try
+                {
+                    int rut = Convert.ToInt32(txt_RutCamionero.Text);
+                    gw_GrillaCamionero.DataSource = LogicaCamionero.SearchCamionero(rut);
+                    gw_GrillaCamionero.DataBind();
+                    gw_GrillaCamionero.Visible = false;
 
-            txt_RutCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[0].Text;
-            txt_DvCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[1].Text;
-            txt_NombreCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[2].Text;
-            txt_TelefonoCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[3].Text;
-            txt_DireccionCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[4].Text;
-            txt_SalarioCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[5].Text;
-            txt_PoblacionCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[6].Text;
+                    txt_RutCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[0].Text;
+                    txt_DvCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[1].Text;
+                    txt_NombreCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[2].Text;
+                    txt_TelefonoCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[3].Text;
+                    txt_DireccionCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[4].Text;
+                    txt_SalarioCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[5].Text;
+                    txt_PoblacionCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[6].Text;
+                CleanErrors();
+
+
+                }
+                catch
+                {
+                    MsgRut.Text = "El rut Consultado no existe";
+                }
+            
+
+                   
+                    
+               
+
+            //int rut = Convert.ToInt32(txt_RutCamionero.Text);
+
+            //gw_GrillaCamionero.DataSource = LogicaCamionero.SearchCamionero(rut);
+            //gw_GrillaCamionero.DataBind();
+            //gw_GrillaCamionero.Visible = false;
+
+            //txt_RutCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[0].Text;
+            //txt_DvCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[1].Text;
+            //txt_NombreCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[2].Text;
+            //txt_TelefonoCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[3].Text;
+            //txt_DireccionCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[4].Text;
+            //txt_SalarioCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[5].Text;
+            //txt_PoblacionCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[6].Text;
         }
 
         protected void btn_DeleteCamionero_Click(object sender, EventArgs e)
@@ -141,6 +311,13 @@ namespace VistaPresentacion
         }
         public void CleanErrors()
         {
+            MsgRut.Text = "";
+            MsgDireccion.Text = "";
+            MsgNombre.Text = "";
+            MsgPoblacion.Text = "";
+            MsgSalario.Text = "";
+            MsgTelefono.Text = "";
+            MsgDv.Text = "";
         }
     }
 }

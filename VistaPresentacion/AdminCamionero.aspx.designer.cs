@@ -76,6 +76,24 @@ namespace VistaPresentacion {
         protected global::System.Web.UI.WebControls.TextBox txt_DvCamionero;
         
         /// <summary>
+        /// Control MsgRut.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MsgRut;
+        
+        /// <summary>
+        /// Control MsgDv.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MsgDv;
+        
+        /// <summary>
         /// Control btn_SearchCamionero.
         /// </summary>
         /// <remarks>
@@ -101,6 +119,15 @@ namespace VistaPresentacion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_NombreCamionero;
+        
+        /// <summary>
+        /// Control MsgNombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MsgNombre;
         
         /// <summary>
         /// Control btn_CleanCamionero.
@@ -130,6 +157,15 @@ namespace VistaPresentacion {
         protected global::System.Web.UI.WebControls.TextBox txt_TelefonoCamionero;
         
         /// <summary>
+        /// Control MsgTelefono.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MsgTelefono;
+        
+        /// <summary>
         /// Control Label6.
         /// </summary>
         /// <remarks>
@@ -146,6 +182,15 @@ namespace VistaPresentacion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_DireccionCamionero;
+        
+        /// <summary>
+        /// Control MsgDireccion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MsgDireccion;
         
         /// <summary>
         /// Control Label7.
@@ -166,6 +211,15 @@ namespace VistaPresentacion {
         protected global::System.Web.UI.WebControls.TextBox txt_SalarioCamionero;
         
         /// <summary>
+        /// Control MsgSalario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MsgSalario;
+        
+        /// <summary>
         /// Control Label8.
         /// </summary>
         /// <remarks>
@@ -182,6 +236,15 @@ namespace VistaPresentacion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_PoblacionCamionero;
+        
+        /// <summary>
+        /// Control MsgPoblacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MsgPoblacion;
         
         /// <summary>
         /// Control btn_SaveCamionero.
