@@ -112,27 +112,12 @@
                 </tr>
                 <tr>
                     <td class="auto-style2">
-                        <asp:Label ID="Label7" runat="server" Text="Provincia de destino"></asp:Label>
-                    </td>
-                    <td class="auto-style1">
-                        <asp:DropDownList ID="ddl_ProvEncomienda" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource4" DataTextField="Nombre" DataValueField="Cod_Provincia" Width="168px">
-                        </asp:DropDownList>
-                        <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:Prueba3ConnectionString %>" SelectCommand="SELECT * FROM [Provincia] ORDER BY [Cod_Provincia]"></asp:SqlDataSource>
-                    </td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">
                         <asp:Label ID="Label8" runat="server" Text="Comuna de destino"></asp:Label>
                     </td>
                     <td class="auto-style1">
                         <asp:DropDownList ID="ddl_ComuEncomienda" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource5" DataTextField="Nombre" DataValueField="Cod_Comuna" Width="168px">
                         </asp:DropDownList>
-                        <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:Prueba3ConnectionString %>" SelectCommand="SELECT * FROM [Comuna] WHERE ([Cod_Provincia] = @Cod_Provincia)">
-                            <SelectParameters>
-                                <asp:ControlParameter ControlID="ddl_ProvEncomienda" Name="Cod_Provincia" PropertyName="SelectedValue" Type="Int32" />
-                            </SelectParameters>
+                        <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:Prueba3ConnectionString %>" SelectCommand="SELECT * FROM [Comuna]">
                         </asp:SqlDataSource>
                     </td>
                     <td>&nbsp;</td>
