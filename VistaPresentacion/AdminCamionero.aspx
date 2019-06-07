@@ -24,12 +24,12 @@
         .auto-style5 {
             height: 29px;
         }
-        .auto-style6 {
-            width: 601px;
+        .auto-style8 {
+            width: 310px;
         }
-        .auto-style7 {
+        .auto-style9 {
+            width: 310px;
             height: 29px;
-            width: 601px;
         }
         </style>
 </head>
@@ -52,9 +52,10 @@
                     &nbsp;<asp:Label ID="Label13" runat="server" Text="-"></asp:Label>
 &nbsp;<asp:TextBox ID="txt_DvCamionero" runat="server" Width="20px" MaxLength="1"></asp:TextBox>
                     </td>
-                    <td class="auto-style6">
+                    <td class="auto-style8">
                         <asp:Label ID="MsgRut" runat="server"></asp:Label>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="auto-style8">
                         <asp:Label ID="MsgDv" runat="server"></asp:Label>
                     </td>
                     <td>
@@ -68,9 +69,11 @@
                     <td class="auto-style2">
                         <asp:TextBox ID="txt_NombreCamionero" runat="server"></asp:TextBox>
                     </td>
-                    <td class="auto-style6">
+                    <td class="auto-style8">
                         <asp:Label ID="MsgNombre" runat="server"></asp:Label>
                     </td>
+                    <td class="auto-style8">
+                        &nbsp;</td>
                     <td>
             <asp:Button ID="btn_CleanCamionero" runat="server" Text="Limpiar Formulario" Width="207px" OnClick="btn_CleanCamionero_Click" />
                     </td>
@@ -82,9 +85,11 @@
                     <td class="auto-style4">
                         <asp:TextBox ID="txt_TelefonoCamionero" runat="server"></asp:TextBox>
                     </td>
-                    <td class="auto-style7">
+                    <td class="auto-style9">
                         <asp:Label ID="MsgTelefono" runat="server"></asp:Label>
                     </td>
+                    <td class="auto-style9">
+                        &nbsp;</td>
                     <td class="auto-style5">
                         &nbsp;</td>
                 </tr>
@@ -95,9 +100,11 @@
                     <td class="auto-style2">
                         <asp:TextBox ID="txt_DireccionCamionero" runat="server"></asp:TextBox>
                     </td>
-                    <td class="auto-style6">
+                    <td class="auto-style8">
                         <asp:Label ID="MsgDireccion" runat="server"></asp:Label>
                     </td>
+                    <td class="auto-style8">
+                        &nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
@@ -107,9 +114,11 @@
                     <td class="auto-style2">
                         <asp:TextBox ID="txt_SalarioCamionero" runat="server"></asp:TextBox>
                     </td>
-                    <td class="auto-style6">
+                    <td class="auto-style8">
                         <asp:Label ID="MsgSalario" runat="server"></asp:Label>
                     </td>
+                    <td class="auto-style8">
+                        &nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
@@ -119,9 +128,11 @@
                     <td class="auto-style2">
                         <asp:TextBox ID="txt_PoblacionCamionero" runat="server"></asp:TextBox>
                     </td>
-                    <td class="auto-style6">
+                    <td class="auto-style8">
                         <asp:Label ID="MsgPoblacion" runat="server"></asp:Label>
                     </td>
+                    <td class="auto-style8">
+                        &nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
@@ -129,7 +140,8 @@
                         &nbsp;</td>
                     <td class="auto-style2">
                         &nbsp;</td>
-                    <td class="auto-style6">&nbsp;</td>
+                    <td class="auto-style8">&nbsp;</td>
+                    <td class="auto-style8">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 </table>
