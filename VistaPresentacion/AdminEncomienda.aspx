@@ -30,6 +30,9 @@
                         <asp:TextBox ID="txt_CodigoEncomienda" runat="server"></asp:TextBox>
                     </td>
                     <td>
+                        <asp:Label ID="lbl_ErrorCodigo" runat="server"></asp:Label>
+                    </td>
+                    <td>
                         <asp:Button ID="btn_SearchEncomienda" runat="server" Text="Buscar Paquete" Width="207px" OnClick="btn_SearchEncomienda_Click" />
                     </td>
                 </tr>
@@ -39,6 +42,9 @@
                     </td>
                     <td class="auto-style1">
                         <asp:TextBox ID="txt_DescEncomienda" runat="server"></asp:TextBox>
+                    </td>
+                    <td>
+                        <asp:Label ID="lbl_ErrorDescrip" runat="server"></asp:Label>
                     </td>
                     <td>
                         <asp:Button ID="btn_CleanEncomienda" runat="server" Text="Limpiar Formulario" Width="207px" OnClick="btn_CleanEncomienda_Click" />
@@ -51,6 +57,9 @@
                     <td class="auto-style1">
                         <asp:TextBox ID="txt_NombreEncomienda" runat="server"></asp:TextBox>
                     </td>
+                    <td>
+                        <asp:Label ID="lbl_ErrorNombre" runat="server"></asp:Label>
+                    </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
@@ -60,11 +69,15 @@
                     <td class="auto-style1">
                         <asp:TextBox ID="txt_DireccionEncomienda" runat="server"></asp:TextBox>
                     </td>
+                    <td>
+                        <asp:Label ID="lbl_ErrorDireccion" runat="server"></asp:Label>
+                    </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style2">&nbsp;</td>
                     <td class="auto-style1">&nbsp;</td>
+                    <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
@@ -76,6 +89,8 @@
                         </asp:DropDownList>
                         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:Prueba3ConnectionString %>" SelectCommand="SELECT * FROM [Camionero] ORDER BY [Nombre]"></asp:SqlDataSource>
                     </td>
+                    <td>
+                        &nbsp;</td>
                     <td>
                         <asp:Button ID="btn_CamioneroEncomienda" runat="server" OnClick="btn_CamioneroEncomienda_Click" Text="Ingresar Nuevo Camionero" Width="207px" />
                     </td>
@@ -90,6 +105,8 @@
                         <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:Prueba3ConnectionString %>" SelectCommand="SELECT * FROM [Camiones] ORDER BY [Id_Camion]"></asp:SqlDataSource>
                     </td>
                     <td>
+                        &nbsp;</td>
+                    <td>
                         <asp:Button ID="btn_CamionEncomienda" runat="server" OnClick="btn_CamionEncomienda_Click" Text="Ingresar nuevo camión" Width="207px" />
                     </td>
                 </tr>
@@ -102,6 +119,7 @@
                         </asp:DropDownList>
                         <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:Prueba3ConnectionString %>" SelectCommand="SELECT * FROM [Provincia] ORDER BY [Cod_Provincia]"></asp:SqlDataSource>
                     </td>
+                    <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
@@ -118,10 +136,12 @@
                         </asp:SqlDataSource>
                     </td>
                     <td>&nbsp;</td>
+                    <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style2">&nbsp;</td>
                     <td class="auto-style1">&nbsp;</td>
+                    <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
             </table>

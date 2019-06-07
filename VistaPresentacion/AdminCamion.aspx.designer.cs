@@ -58,6 +58,15 @@ namespace VistaPresentacion {
         protected global::System.Web.UI.WebControls.TextBox txt_MatriculaCamion;
         
         /// <summary>
+        /// Control lbl_ErrorMatricula.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_ErrorMatricula;
+        
+        /// <summary>
         /// Control btn_SearchCamion.
         /// </summary>
         /// <remarks>
@@ -83,6 +92,15 @@ namespace VistaPresentacion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_PotenciaCamion;
+        
+        /// <summary>
+        /// Control lbl_ErrorPotencia.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_ErrorPotencia;
         
         /// <summary>
         /// Control btn_CleanCamion.

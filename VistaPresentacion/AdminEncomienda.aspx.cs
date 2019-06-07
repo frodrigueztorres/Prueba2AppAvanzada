@@ -14,7 +14,86 @@ namespace VistaPresentacion
         {
 
         }
+        public bool IsNumeric(string num)
+        {
+            try
+            {
+                double x = Convert.ToDouble(num);
+                //return true;
+                if (x > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool ValidarDatos()
+        {
+            bool valCodigo = false;
+            bool valDescripcion = false;
+            bool valNombre = false;
+            bool valDireccion = false;
+            //Validacion Codigo
+            if (txt_CodigoEncomienda.Text == "" || txt_CodigoEncomienda.Text == null)
+            {
+                lbl_ErrorCodigo.Text = "Codigo no debe estar vacio";
+            }
+            else if (!IsNumeric(txt_CodigoEncomienda.Text))
+            {
+                lbl_ErrorCodigo.Text = "Codigo debe ser un número positivo";
+            }
+            else
+            {
+                lbl_ErrorCodigo.Text = "";
+                valCodigo = true;
+            }
+            //Validacion Descripcion
+            if (txt_DescEncomienda.Text == "" || txt_DescEncomienda.Text == null)
+            {
+                lbl_ErrorDescrip.Text = "Codigo no debe estar vacio";
+            }
+            else
+            {
+                lbl_ErrorDescrip.Text = "";
+                valDescripcion = true;
+            }
+            //Validacion Nombre Destinatario
+            if (txt_NombreEncomienda.Text == "" || txt_NombreEncomienda.Text == null)
+            {
+                lbl_ErrorNombre.Text = "Codigo no debe estar vacio";
+            }
+            else
+            {
+                lbl_ErrorNombre.Text = "";
+                valNombre = true;
+            }
+            //Validacion Direccion
+            if (txt_DireccionEncomienda.Text == "" || txt_DireccionEncomienda.Text == null)
+            {
+                lbl_ErrorDireccion.Text = "Codigo no debe estar vacio";
+            }
+            else
+            {
+                lbl_ErrorDireccion.Text = "";
+                valDireccion = true;
+            }
 
+            if (valCodigo && valDescripcion && valNombre && valDireccion)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         protected void btn_SaveEncomienda_Click(object sender, EventArgs e)
         {
             if (!Page.IsValid)
