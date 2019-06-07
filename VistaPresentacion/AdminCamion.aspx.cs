@@ -187,6 +187,7 @@ namespace VistaPresentacion
                 txt_MatriculaCamion.Text = gw_GrillaCamion.Rows[0].Cells[1].Text;
                 ddl_tipoCamion.SelectedValue = gw_GrillaCamion.Rows[0].Cells[2].Text;
                 txt_PotenciaCamion.Text = gw_GrillaCamion.Rows[0].Cells[3].Text;
+                CleanErrors();
             }
             catch (Exception)
             {
