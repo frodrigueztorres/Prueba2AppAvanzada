@@ -44,8 +44,8 @@
     <Compile Include="AccesoDatosCamionCamionero.cs" />
     <Compile Include="AccesoDatosCamionero.cs" />
     <Compile Include="AccesoDatosPaquete.cs" />
-    <Compile Include="MetodoDatos.cs" />
     <Compile Include="Configuracion.cs" />
+    <Compile Include="MetodoDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

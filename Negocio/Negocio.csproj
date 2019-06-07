@@ -45,7 +45,6 @@
     <Compile Include="LogicaCamionero.cs" />
     <Compile Include="LogicaPaquete.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ValueError\Substring.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Datos\Datos.csproj">
