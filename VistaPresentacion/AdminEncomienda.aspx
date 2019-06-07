@@ -74,7 +74,7 @@
                     <td class="auto-style1">
                         <asp:DropDownList ID="ddl_CameroEncomienda" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource2" DataTextField="Nombre" DataValueField="Rut" Width="168px">
                         </asp:DropDownList>
-                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:Prueba3ConnectionString %>" SelectCommand="SELECT * FROM [Camionero] ORDER BY [Nombre]"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:Prueba3ConnectionVictor %>" SelectCommand="SELECT * FROM [Camionero] ORDER BY [Nombre]"></asp:SqlDataSource>
                     </td>
                     <td>
                         <asp:Button ID="btn_CamioneroEncomienda" runat="server" OnClick="btn_CamioneroEncomienda_Click" Text="Ingresar Nuevo Camionero" Width="207px" />
@@ -87,7 +87,7 @@
                     <td class="auto-style1">
                         <asp:DropDownList ID="ddl_CamionEncomienda" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource3" DataTextField="Matricula" DataValueField="Id_Camion" Width="168px">
                         </asp:DropDownList>
-                        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:Prueba3ConnectionString %>" SelectCommand="SELECT * FROM [Camiones] ORDER BY [Id_Camion]"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:Prueba3ConnectionVictor %>" SelectCommand="SELECT * FROM [Camiones] ORDER BY [Id_Camion]"></asp:SqlDataSource>
                     </td>
                     <td>
                         <asp:Button ID="btn_CamionEncomienda" runat="server" OnClick="btn_CamionEncomienda_Click" Text="Ingresar nuevo camión" Width="207px" />
@@ -100,7 +100,7 @@
                     <td class="auto-style1">
                         <asp:DropDownList ID="ddl_ProvEncomienda" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource4" DataTextField="Nombre" DataValueField="Cod_Provincia" Width="168px">
                         </asp:DropDownList>
-                        <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:Prueba3ConnectionString %>" SelectCommand="SELECT * FROM [Provincia] ORDER BY [Cod_Provincia]"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:Prueba3ConnectionVictor %>" SelectCommand="SELECT * FROM [Provincia] ORDER BY [Cod_Provincia]"></asp:SqlDataSource>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
@@ -111,7 +111,7 @@
                     <td class="auto-style1">
                         <asp:DropDownList ID="ddl_ComuEncomienda" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource5" DataTextField="Nombre" DataValueField="Cod_Comuna" Width="168px">
                         </asp:DropDownList>
-                        <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:Prueba3ConnectionString %>" SelectCommand="SELECT * FROM [Comuna] WHERE ([Cod_Provincia] = @Cod_Provincia)">
+                        <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:Prueba3ConnectionVictor %>" SelectCommand="SELECT * FROM [Comuna] WHERE ([Cod_Provincia] = @Cod_Provincia)">
                             <SelectParameters>
                                 <asp:ControlParameter ControlID="ddl_ProvEncomienda" Name="Cod_Provincia" PropertyName="SelectedValue" Type="Int32" />
                             </SelectParameters>
