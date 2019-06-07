@@ -201,6 +201,7 @@ namespace VistaPresentacion
                 {
                     ddl_CamionEncomienda.SelectedValue = gw_GrillaEncomienda.Rows[0].Cells[6].Text;
                 }
+                CleanErrors();
             }
             catch (Exception)
             {
