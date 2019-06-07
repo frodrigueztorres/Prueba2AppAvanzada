@@ -44,7 +44,6 @@
     <Compile Include="LogicaCamionCamionero.cs" />
     <Compile Include="LogicaCamionero.cs" />
     <Compile Include="LogicaPaquete.cs" />
-    <Compile Include="LogicaVerificacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValueError\Substring.cs" />
   </ItemGroup>

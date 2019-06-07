@@ -30,6 +30,9 @@
                         <asp:TextBox ID="txt_MatriculaCamion" runat="server"></asp:TextBox>
                     </td>
                     <td>
+                        <asp:Label ID="lbl_ErrorMatricula" runat="server"></asp:Label>
+                    </td>
+                    <td>
                         <asp:Button ID="btn_SearchCamion" runat="server" Text="Buscar Camión" Width="207px" OnClick="btn_SearchCamion_Click" />
                     </td>
                 </tr>
@@ -39,6 +42,9 @@
                     </td>
                     <td class="auto-style7">
                         <asp:TextBox ID="txt_PotenciaCamion" runat="server"></asp:TextBox>
+                    </td>
+                    <td>
+                        <asp:Label ID="lbl_ErrorPotencia" runat="server"></asp:Label>
                     </td>
                     <td>
                         <asp:Button ID="btn_CleanCamion" runat="server" Text="Limpiar Formulario" Width="207px" OnClick="btn_CleanCamion_Click" />
@@ -53,6 +59,8 @@
                         </asp:DropDownList>
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Prueba3ConnectionVictor %>" SelectCommand="SELECT * FROM [Tipo_Camion]"></asp:SqlDataSource>
                     </td>
+                    <td>
+                        &nbsp;</td>
                     <td>
                         &nbsp;</td>
                 </tr>
