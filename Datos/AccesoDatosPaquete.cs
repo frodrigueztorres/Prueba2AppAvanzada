@@ -53,7 +53,7 @@ namespace Datos
         public static DataTable ListPaquete(int cod_paquete)
         {
             SqlCommand cmd = MetodoDatos.CrearComando();
-            cmd.CommandText = "select a.Cod_Paquete, a.Descripcion, a.Destinatario, a.Direc_Destinatario, a.Cod_Comuna, c.Cod_Provincia, a.Rut, f.Id_Camion from Paquete a join Comuna b on a.Cod_Comuna = b.Cod_Comuna join Provincia c on c.Cod_Provincia = b.Cod_Provincia left join Camionero d on d.Rut = a.Rut left join Camion_Camionero e on e.Rut = d.Rut left join Camiones f on f.Id_Camion = e.Id_Camion where Cod_Paquete=@cod_paquete";
+            cmd.CommandText = "select a.Cod_Paquete, a.Descripcion, a.Destinatario, a.Direc_Destinatario, a.Cod_Comuna, a.Rut, f.Id_Camion from Paquete a join Comuna b on a.Cod_Comuna = b.Cod_Comuna join Provincia c on c.Cod_Provincia = b.Cod_Provincia left join Camionero d on d.Rut = a.Rut left join Camion_Camionero e on e.Rut = d.Rut left join Camiones f on f.Id_Camion = e.Id_Camion where Cod_Paquete=@cod_paquete";
 
             cmd.Parameters.Add("@cod_paquete", cod_paquete);
 

@@ -140,35 +140,59 @@ namespace VistaPresentacion
         //ACTUALIZAR CAMION
         protected void btn_UpdateCamion_Click(object sender, EventArgs e)
         {
-            string matricula = txt_MatriculaCamion.Text;
-            int tipo = Convert.ToInt32(ddl_tipoCamion.SelectedValue);
-            int potencia = Convert.ToInt32(txt_PotenciaCamion.Text);
+            if (ValidarDatos() == true)
+            {
+                try
+                {
+                    string matricula = txt_MatriculaCamion.Text;
+                    int tipo = Convert.ToInt32(ddl_tipoCamion.SelectedValue);
+                    int potencia = Convert.ToInt32(txt_PotenciaCamion.Text);
 
-            LogicaCamion negocio = new LogicaCamion();
-            int resultado = negocio.UpdateCamion(matricula, tipo, potencia);
+                    LogicaCamion negocio = new LogicaCamion();
+                    int resultado = negocio.UpdateCamion(matricula, tipo, potencia);
 
-            if (resultado > 0) {
-                lbl_msgCamion.Text = "Registro actualizado satisfactoriamente";
-                CleanData();
-                CleanErrors();
-            }  
-            else {
-                lbl_msgCamion.Text = "No se pudo actualizar el registro";
-            }    
-            negocio = null;
+                    if (resultado > 0)
+                    {
+                        lbl_msgCamion.Text = "Registro actualizado satisfactoriamente";
+                        CleanData();
+                        CleanErrors();
+                    }
+                    else
+                    {
+                        lbl_msgCamion.Text = "No se pudo actualizar el registro";
+                    }
+                    negocio = null;
+                }
+                catch (Exception)
+                {
+
+                    lbl_msgCamion.Text = "El registro no se pudo actualizar";
+                }
+            }
+            else
+            {
+                lbl_msgCamion.Text = "El registro no se pudo actualizar";
+            }
         }
         //BUSCAR CAMION
         protected void btn_SearchCamion_Click(object sender, EventArgs e)
         {
             string matricula = txt_MatriculaCamion.Text;
+            try
+            {
+                gw_GrillaCamion.DataSource = LogicaCamion.SearchCamion(matricula);
+                gw_GrillaCamion.DataBind();
+                gw_GrillaCamion.Visible = false;
 
-            gw_GrillaCamion.DataSource = LogicaCamion.SearchCamion(matricula);
-            gw_GrillaCamion.DataBind();
-            gw_GrillaCamion.Visible = false;
+                txt_MatriculaCamion.Text = gw_GrillaCamion.Rows[0].Cells[1].Text;
+                ddl_tipoCamion.SelectedValue = gw_GrillaCamion.Rows[0].Cells[2].Text;
+                txt_PotenciaCamion.Text = gw_GrillaCamion.Rows[0].Cells[3].Text;
+            }
+            catch (Exception)
+            {
 
-            txt_MatriculaCamion.Text = gw_GrillaCamion.Rows[0].Cells[1].Text;
-            ddl_tipoCamion.SelectedValue = gw_GrillaCamion.Rows[0].Cells[2].Text;
-            txt_PotenciaCamion.Text = gw_GrillaCamion.Rows[0].Cells[3].Text;
+                lbl_msgCamion.Text = "No se encontró el registro";
+            }
         }
         //ELIMINAR CAMION
         protected void btn_DeleteCamion_Click(object sender, EventArgs e)
