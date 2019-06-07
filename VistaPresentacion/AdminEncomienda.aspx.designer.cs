@@ -49,6 +49,15 @@ namespace VistaPresentacion {
         protected global::System.Web.UI.WebControls.TextBox txt_CodigoEncomienda;
         
         /// <summary>
+        /// Control lbl_ErrorCodigo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_ErrorCodigo;
+        
+        /// <summary>
         /// Control btn_SearchEncomienda.
         /// </summary>
         /// <remarks>
@@ -74,6 +83,15 @@ namespace VistaPresentacion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_DescEncomienda;
+        
+        /// <summary>
+        /// Control lbl_ErrorDescrip.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_ErrorDescrip;
         
         /// <summary>
         /// Control btn_CleanEncomienda.
@@ -103,6 +121,15 @@ namespace VistaPresentacion {
         protected global::System.Web.UI.WebControls.TextBox txt_NombreEncomienda;
         
         /// <summary>
+        /// Control lbl_ErrorNombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_ErrorNombre;
+        
+        /// <summary>
         /// Control Label5.
         /// </summary>
         /// <remarks>
@@ -119,6 +146,15 @@ namespace VistaPresentacion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_DireccionEncomienda;
+        
+        /// <summary>
+        /// Control lbl_ErrorDireccion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_ErrorDireccion;
         
         /// <summary>
         /// Control Label6.
