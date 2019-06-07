@@ -177,9 +177,10 @@ namespace VistaPresentacion
         //BUSCAR CAMION
         protected void btn_SearchCamion_Click(object sender, EventArgs e)
         {
-            string matricula = txt_MatriculaCamion.Text;
+            
             try
             {
+                string matricula = txt_MatriculaCamion.Text;
                 gw_GrillaCamion.DataSource = LogicaCamion.SearchCamion(matricula);
                 gw_GrillaCamion.DataBind();
                 gw_GrillaCamion.Visible = false;

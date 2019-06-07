@@ -173,9 +173,10 @@ namespace VistaPresentacion
 
         protected void btn_SearchEncomienda_Click(object sender, EventArgs e)
         {
-            int cod_paquete = Convert.ToInt32(txt_CodigoEncomienda.Text);
+            
             try
             {
+                int cod_paquete = Convert.ToInt32(txt_CodigoEncomienda.Text);
                 gw_GrillaEncomienda.DataSource = LogicaPaquete.SearchPaquete(cod_paquete);
                 gw_GrillaEncomienda.DataBind();
                 gw_GrillaEncomienda.Visible = false;
