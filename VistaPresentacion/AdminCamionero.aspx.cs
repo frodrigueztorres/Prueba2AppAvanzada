@@ -42,6 +42,10 @@ namespace VistaPresentacion
             {
                 MsgRut.Text = "Debe ingresar un valor en campo Rut";
             }
+            else if (txt_RutCamionero.Text.Length < 7 || txt_RutCamionero.Text.Length > 8)
+            {
+                MsgRut.Text = "Debe ingresar solo numeros en el campo rut";
+            }
             else if(!IsNumeric(txt_RutCamionero.Text))
             {
                 MsgRut.Text = "Debe ingresar solo numeros en el campo rut";
@@ -50,21 +54,24 @@ namespace VistaPresentacion
             {
                 MsgRut.Text = "";
                 valRut = true;
-
             }
 
             if(txt_DvCamionero.Text == "" || txt_DvCamionero.Text == null)
             {
                 MsgDv.Text = "Debe ingresar un valor en el campo DV";
             }
-            else if(!IsNumeric(txt_DvCamionero.Text) || txt_DvCamionero.Text != "K")
+            else if(txt_DvCamionero.Text.Length > 1)
             {
                 MsgDv.Text = "Debe ingresar un valor valido en DV";
             }
-            else
+            else if(IsNumeric(txt_DvCamionero.Text) || txt_DvCamionero.Text.Contains('k') || txt_DvCamionero.Text.Contains('K'))
             {
                 MsgDv.Text = "";
                 valDv = true;
+            }
+            else
+            {
+                MsgDv.Text = "Debe ingresar un valor valido en DV";
             }
 
             if(txt_NombreCamionero.Text == "" || txt_NombreCamionero.Text == null)
@@ -163,11 +170,8 @@ namespace VistaPresentacion
                     lbl_msgCamionero.Text = "El registro a ingresar ya existe";
                 }
                 negocio = null;
-            }
-
-            
+            }  
         }
-
         protected void btn_UpdateCamionero_Click(object sender, EventArgs e)
         {
             if(validacion() == true)
@@ -205,13 +209,8 @@ namespace VistaPresentacion
             }
             
         }
-
         protected void btn_SearchCamionero_Click(object sender, EventArgs e)
         {
-
-            
-            
-                
                 try
                 {
                     int rut = Convert.ToInt32(txt_RutCamionero.Text);
@@ -234,25 +233,6 @@ namespace VistaPresentacion
                 {
                     MsgRut.Text = "El rut Consultado no existe";
                 }
-            
-
-                   
-                    
-               
-
-            //int rut = Convert.ToInt32(txt_RutCamionero.Text);
-
-            //gw_GrillaCamionero.DataSource = LogicaCamionero.SearchCamionero(rut);
-            //gw_GrillaCamionero.DataBind();
-            //gw_GrillaCamionero.Visible = false;
-
-            //txt_RutCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[0].Text;
-            //txt_DvCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[1].Text;
-            //txt_NombreCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[2].Text;
-            //txt_TelefonoCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[3].Text;
-            //txt_DireccionCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[4].Text;
-            //txt_SalarioCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[5].Text;
-            //txt_PoblacionCamionero.Text = gw_GrillaCamionero.Rows[0].Cells[6].Text;
         }
 
         protected void btn_DeleteCamionero_Click(object sender, EventArgs e)
